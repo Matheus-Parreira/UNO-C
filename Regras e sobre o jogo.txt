@@ -1,0 +1,83 @@
+Bem-vindo ao UNO-C!
+Essa versao do popular jogo de cartas proporciona partidas divertidas e emocionantes entre quatro jogadores, sendo
+voce (o Usuario), e tres "robos" (cujas acoes sao controladas pelo proprio codigo).
+O objetivo e o mesmo de sempre: ser o primeiro a se livrar de todas as cartas em sua "mao"!
+
+Mas antes disso, e bom dar uma conferida nas regras, e tambem em como o jogo funciona de forma geral:
+
+------<O BARALHO>------
+
+Como no jogo real, o baralho do UNO-C possui um total de 108 cartas, nas cores tradicionais (Amarelo, Azul, Verde e
+Vermelho), alem da cor Especial para as cartas coringa (Coringa e +4), divididas da seguinte forma:
+Para cada cor:
+	- 1 conjunto de cartas de 0 a 9;
+	- 1 conjunto de cartas de 1 a 9;
+	- 2 cartas Pular;
+	- 2 cartas +2;
+	- 2 cartas Inverter.
+- 4 cartas Coringa;
+- 4 cartas +4.
+
+------<ANTES DA PARTIDA>------
+
+Ao selecionar a opcao de iniciar uma partida, as cartas serao carregadas e "embaralhadas" de forma aleatoria, sendo
+entao distribuidas entre os jogadores; cada um recebera sete cartas, e as que restaram formarao o Monte, do qual a
+carta em seu "topo" sera tirada e colocada no Descarte para dar inicio a partida.
+
+------<PARTIDA>------
+
+Ao chegar sua vez, o jogador devera jogar uma carta de sua mao, conforme a ultima carta jogada (tambem chamada de
+Carta Atual); isso e feito atraves de uma funcao que a percorre procurando por cartas que ele pode jogar, as passando
+para um vetor separado (chamado de Cartas Disponiveis) a medida em que as encontra - vetor esse de onde o jogador
+escolhera a carta que ira para o topo do Descarte.
+
+Para que uma carta possa ser jogada, ela precisa "combinar" com a Carta Atual - ou seja, ter a mesma cor ou
+valor/simbolo em relacao a ela - ou entao ser uma carta de cor Especial, sob certas condicoes (mais detalhes na secao
+OBSERVACOES ADICIONAIS).
+
+Se o jogador puder jogar naquela rodada, a carta escolhida saira de sua mao e ira para o topo do Descarte, passando a
+ser a nova Carta Atual; para os demais jogadores, a carta em questao e selecionada aleatoriamente dentre as cartas no
+vetor Cartas Disponiveis, enquanto o Usuario escolhe qual delas ira jogar.
+
+Porem, caso nao consiga jogar nenhuma carta, o jogador tera que pegar a que estiver no topo do Monte, que sera entao
+analisada: se combinar com a Carta Atual ou for uma carta de cor Especial, ela sera jogada automaticamente logo em
+seguida; do contrario, permanecera na mao do jogador, ate ser jogada em outra rodada.
+
+------<CARTAS DE ACAO>------
+
+Se a carta jogada por sua vez for uma carta de acao, suas funcoes e regras correspondentes serao aplicadas, conforme
+especificado abaixo:
+
+Pular: O proximo jogador fica sem jogar na rodada.
+
++2: O proximo jogador fica sem jogar na rodada, tendo que pegar duas cartas do Monte.
+
+Inverter: O sentido da sequencia de jogo e invertido, com o proximo jogador agora sendo aquele que estava antes de
+quem a jogou na sequencia original.
+
+Coringa: Aquele que a jogou escolhe a cor que a proxima carta devera ter.
+
++4: Aquele que a jogou escolhe a cor que a proxima carta devera ter, e o proximo jogador fica sem jogar na rodada,
+tendo que pegar quatro cartas do Monte.
+
+------<OBSERVACOES ADICIONAIS>------
+
+- Ao iniciar a partida, a carta no topo do Monte so ira para o Descarte se ela for uma carta de tipo Comum (valor
+numerico de 0 a 9); se a carta em questao for uma carta de acao (Pular, Inverter, Coringa, +2 ou +4), o Monte sera
+embaralhado novamente, ate que essa condicao seja satisfeita.
+
+- Caso o Usuario possa jogar apenas uma unica carta na rodada, ela sera jogada automaticamente (afinal de contas, nao
+e como se voce pudesse escolher qual voce ira jogar nesse caso...).
+
+- A carta +4 so pode ser jogada caso o jogador nao tenha nenhuma outra carta que possa jogar naquela rodada.
+
+- Ao jogar uma carta Coringa ou +4, o jogador so podera escolher para a proxima carta cores que ele tenha nas cartas
+em sua mao naquela rodada; se o jogador nao tiver nenhuma das quatro cores, ele podera escolher entre qualquer uma
+delas, e se o Usuario tiver apenas uma unica cor, ela sera selecionada automaticamente.
+
+- Se restarem poucas cartas no Monte em dado momento da partida, as cartas no Descarte serao passadas para ele, que
+sera entao reembaralhado.
+
+------------------------------------
+Bem... E isso.
+Espero que se divirta bastante jogando o UNO-C!
