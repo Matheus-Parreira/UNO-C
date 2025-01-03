@@ -32,7 +32,7 @@ detalhes — e sinceramente, eu não poderia estar mais orgulhoso do resultado f
 
 Para acessar o UNO-C, vá até a versão mais recente na aba [Releases](https://github.com/Matheus-Parreira/UNO-C/releases), e clique
 na pasta com o código-fonte (Source code) e o arquivo .exe para baixa-los; descompacte a pasta, e coloque o arquivo .exe dentro dela,
-de modo que o caminho para o arquivo esteja da seguinte forma:
+junto com as demais pastas e arquivos: o caminho para o arquivo deve terminar da seguinte forma:
 
 ```
 ...\UNO-C-(versão)\UNO-C.exe
