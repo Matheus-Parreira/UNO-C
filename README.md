@@ -45,4 +45,4 @@ eventuais problemas, fazendo comentários, e dando sugestões.
 
 O UNO-C é distribuido sob a [Licença MIT](LICENSE.txt).
 
-![banner](img\Banner.png)
+![banner](img/Banner.png)
