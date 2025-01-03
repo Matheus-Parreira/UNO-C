@@ -30,8 +30,13 @@ detalhes — e sinceramente, eu não poderia estar mais orgulhoso do resultado f
 
 ## Como acessar o jogo
 
-Para acessar o UNO-C, basta baixar a versão mais recente na aba [Releases](); com a pasta descompactada, é só encontrar o arquivo .exe, 
-clicar e jogar.
+Para acessar o UNO-C, vá até a versão mais recente na aba [Releases](https://github.com/Matheus-Parreira/UNO-C/releases), e clique
+na pasta com o código-fonte (Source code) e o arquivo .exe para baixa-los; descompacte a pasta, e coloque o arquivo .exe dentro dela,
+de modo que o caminho para o arquivo esteja da seguinte forma:
+
+```
+...\UNO-C-(versão)\UNO-C.exe
+```
 
 ## Feedback e atualizações
 
